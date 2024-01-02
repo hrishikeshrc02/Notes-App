@@ -33,8 +33,10 @@ if (user){
 }
 ));
 
-router.get('/auth/google',
-  passport.authenticate('google', { scope: ['profile','email'] }));
+router.get(
+  "/auth/google",
+  passport.authenticate("google", { scope: ["email", "profile"] })
+);
 
 router.get('/google/callback', 
   passport.authenticate('google', { failureRedirect: '/',
