@@ -35,7 +35,7 @@ if (user){
 
 router.get(
   "/auth/google",
-  passport.authenticate("google", { scope: ["email", "profile"] })
+  passport.authenticate("google", { scope: ["profile"] })
 );
 
 router.get('/google/callback', 
